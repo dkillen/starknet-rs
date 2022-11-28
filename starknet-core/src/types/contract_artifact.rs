@@ -250,6 +250,10 @@ impl ContractArtifact {
 
         // Hashes bytecode
         elements.push(compute_hash_on_elements(&self.program.data));
+        
+        for el in &elements {
+            println!("{}", el);
+        }
 
         Ok(compute_hash_on_elements(&elements))
     }
